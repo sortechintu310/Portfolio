@@ -1,0 +1,204 @@
+
+:root{
+    --dark_purple: #A594F9;
+    --medium_purple: #CDC1FF;
+    --light_purple: #E5D9F2;
+    --extra_light_purple: #F5EFFF;
+    --dark_grey: #373a40;
+    --medium_grey: #666666;
+}
+
+/* #home page styling*/
+.home{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--extra_light_purple);
+    padding: 5rem 2rem;
+}
+
+.home .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    width: 90%;
+    margin: auto;
+}
+
+.container div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container p{
+    margin-top: 1rem;
+    text-wrap: wrap;
+    font-size: 1.5rem;
+    columns: var(--medium_grey);
+}
+
+.profile img{
+    border: 2px solid red;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border: .5rem dashed var(--dark_purple);
+    width: 100%;
+    height: 100%;
+}
+
+/* navbar styling */
+nav,nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 2rem;
+    justify-content: flex-end;
+    color: var(--dark_purple);
+}
+nav li{
+    cursor: pointer;
+    list-style: none;
+}
+
+/* about page css */
+.about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 5rem;
+    gap: 2rem;
+}
+
+.about .about-me div{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--medium_grey);
+}
+
+/* skills styling */
+.skills{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--extra_light_purple);
+}
+.skill{
+    padding: 1rem;
+    background-color: var(--dark_grey);
+    outline: .2rem solid var(--dark_purple);
+    border: .1rem solid var(--medium_purple);
+    color: var(--extra_light_purple);
+    
+}
+.skills .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+/* projects styling */
+.projects{
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.projects .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.projects .box{
+    height: fit-content;
+    width: 25vw;
+    border: .1rem solid var(--medium_grey);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.projects .container p{
+    color: var(--medium_grey);
+}
+.projects .container h3{
+    font-size: 2rem;
+}
+.projects .container .imgcontainer{
+    object-fit: cover;
+}
+
+.projects button{
+    width: 100%;
+}
+
+.githublinkbtn{
+    background-color: var(--dark_grey);
+}
+
+/* contact styling */
+.contact{
+    background-color: var(--extra_light_purple);
+    padding: 5rem 2rem;
+    color: var(--dark_grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+.contact a{
+    color: var(--dark_grey);
+    text-underline-offset: .3rem;
+}
+.contact .social{
+    display: flex;
+    gap: 2.5rem;
+    width: 90vw;
+    margin: auto;
+    justify-content: center;
+}
+.contact .social div{
+    font-size: 1.5rem;
+}
+
+
+@media(max-width:880px){
+    .home .container{
+        flex-direction: column;
+    }
+    .profile img{
+        height: 50%;
+    }
+    .about .about-me div{
+        font-size: 1rem;
+    }
+    .skills .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .projects .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .projects .box{
+        width: 80vw;
+        margin: auto;
+    }
+    .contact .social{
+        flex-direction: column;
+        align-items: center;
+    }
+}
